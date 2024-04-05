@@ -11,7 +11,7 @@ const client = new Client({
 
 const youtube = google.youtube({
   version: "v3",
-  auth: "AIzaSyA8lvRmiLfDY5bhjqYB0Uz4zvYVGpxloNM",
+  auth: "AIzaSyAnA4Ytz0dv9IbZ0LvFB-k04CvMY6ZlKOc",
 });
 
 function getRandomVideo(channelId) {
@@ -39,7 +39,7 @@ function getRandomVideo(channelId) {
 
 client.once(Events.ClientReady, async (readyClient) => {
   console.log(`Ready! Logged in as ${readyClient.user.tag}`);
-  const youtubeChannels = ["UC5fDvuLnLPQcKiyHK6xKvZw", "UChbuH4HULlesX_rzlozkT6Q"];
+  const youtubeChannels = [];
   client.channels.fetch("1225813992606531629").then((channel) => {
     setInterval(async () => {
       const date = new Date();
